@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>
+   Register page
+</title>
+<style>
+body{
+	background:#c0c0cc;
+}
+form{
+	
+	width:500px;
+	padding:50px;
+	margin:auto;
+	font-size:18px;
+	font-family:Arial, Helvetica, sans-serif
+}</style>
+</head>
+<body >
+    <h1 style="color: red;" align="center">Customer care form</h2>
+    <p align="center">Please enter the form for update</p>
+    <hr>
+  <form th:action="@{/endpage}" method="POST" >
+  <b>First Name: </b><br>
+  <input type="text"  name="Firstname" Placeholder="first name" required><br><br>
+ <b>Last Name: </b><br>
+ <input type="text" name="Lastname" Placeholder="Last name" required><br><br>
+ <b>Gender:</b> <br>
+    <input type="radio"  name="gender" value="female">Female<br>
+    <input type="radio"  name="gender" value="male" ><label for="male">Male</label><br><br>
+  <b>Contact Number:</b><br>
+  <input type="number" name="number" Placeholder="number" required><br><br>
+  <b>Message:</b><br>
+  <textarea name="message" rows="5" cols="20" Placeholder="text the message" required></textarea><br><br>
+  <button type="submit" align="center">Submit</button></form>
+  
+
+</body>
+</html>
